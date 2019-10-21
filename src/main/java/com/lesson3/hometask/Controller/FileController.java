@@ -6,7 +6,6 @@ import com.lesson3.hometask.Service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,6 +22,12 @@ public class FileController{
     @Autowired
     public FileController(Service service) {
         this.service = service;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/test")
+    public @ResponseBody
+    String test(HttpServletRequest req) {
+        return "ok";
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/fileSave")
