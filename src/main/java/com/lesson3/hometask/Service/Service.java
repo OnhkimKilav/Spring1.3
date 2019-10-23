@@ -5,13 +5,10 @@ import com.lesson3.hometask.Model.File;
 import com.lesson3.hometask.Model.Storage;
 import com.lesson3.hometask.validate.Validate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import java.sql.SQLException;
 
-@Controller
-@Component
+@org.springframework.stereotype.Service
 public class Service<T>{
     private T t;
     private DAO dao;

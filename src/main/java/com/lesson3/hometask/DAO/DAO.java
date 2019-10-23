@@ -6,12 +6,14 @@ import com.lesson3.hometask.validate.Validate;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-
+@Repository
 public class DAO<T> {
     private T t;
     private static SessionFactory sessionFactory;

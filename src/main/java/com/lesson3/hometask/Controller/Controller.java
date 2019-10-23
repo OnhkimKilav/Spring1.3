@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.sql.SQLException;
 
 @org.springframework.stereotype.Controller
-@Component
 public class Controller {
     private Service service;
 
